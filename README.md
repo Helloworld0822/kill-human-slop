@@ -4,6 +4,16 @@
 
 보라색 그라데이션, 큰 헤드라인, 둥근 카드, 알약 모양 버튼, 부드러운 그림자, 반듯한 그리드. AI가 자연스럽게 고르는 익숙한 스타일로 기존 디자인을 다시 만듭니다.
 
+## 빠른 설치
+
+Node.js(npm)와 Git이 설치된 터미널에서 실행하세요.
+
+```bash
+npx skills add Helloworld0822/kill-human-slop
+```
+
+[Skills CLI](https://github.com/vercel-labs/skills)를 npm에서 실행해 이 공개 저장소의 스킬을 현재 프로젝트에 설치합니다. 설치할 AI 도구는 실행 환경에 따라 자동으로 감지하거나 선택할 수 있습니다.
+
 ## AI에 맞는 형식 선택
 
 | 환경 | 사용할 파일 | 사용 방법 |
@@ -11,7 +21,7 @@
 | ChatGPT, Claude, Gemini 등 일반 채팅 AI | [PROMPT.md](PROMPT.md) | 본문을 채팅에 붙여 넣고 대상 코드나 이미지를 함께 제공 |
 | Agent Skills를 지원하는 코딩 AI | [SKILL.md](SKILL.md) | 저장소 폴더를 해당 도구의 스킬 경로에 설치 |
 
-두 파일의 지침은 같습니다. `SKILL.md`에는 검색과 실행을 위한 표준 YAML 메타데이터가 있고, `PROMPT.md`에는 바로 붙여 넣을 본문만 있습니다. 특정 모델이나 MCP, API 키, 추가 패키지는 요구하지 않습니다.
+두 파일의 지침은 같습니다. `SKILL.md`에는 검색과 실행을 위한 표준 YAML 메타데이터가 있고, `PROMPT.md`에는 바로 붙여 넣을 본문만 있습니다. 스킬 자체는 특정 모델이나 MCP, API 키를 요구하지 않습니다.
 
 ## 일반 채팅에서 사용
 
@@ -28,7 +38,23 @@
 
 ## 코딩 AI에 스킬로 설치
 
-공개 저장소이므로 Git으로 바로 내려받을 수 있습니다.
+설치할 도구를 직접 지정하려면 `--agent`를 사용하세요. 여러 도구를 한 번에 지정할 수 있습니다.
+
+```bash
+npx skills add Helloworld0822/kill-human-slop --agent codex claude-code gemini-cli cursor github-copilot
+```
+
+모든 프로젝트에서 사용하려면 사용자 범위로 설치하세요.
+
+```bash
+npx skills add Helloworld0822/kill-human-slop --global
+```
+
+옵션은 [Skills CLI 공식 문서](https://github.com/vercel-labs/skills/blob/main/docs/commands.md)를 참고하세요.
+
+### 수동 설치
+
+Git으로 내려받아 스킬 폴더를 직접 복사할 수도 있습니다.
 
 ```bash
 git clone https://github.com/Helloworld0822/kill-human-slop.git
