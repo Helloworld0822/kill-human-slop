@@ -1,0 +1,4 @@
+interface:
+  display_name: "Kill Human Slop"
+  short_description: "Restyle human designs with ordinary AI taste"
+  default_prompt: "Use $kill-human-slop to restyle this design with your ordinary AI taste while keeping its content and functionality."
